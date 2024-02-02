@@ -1,0 +1,18 @@
+//descrever a responsividade (a falta)
+
+
+// Principal
+    1. (.BODY) O site de início sempre pede permissão para exibição de um pop-up
+    2. (#Bandeira) Falta de entendimento pleno sobre o uso de alocação de imagem
+    3. (.msgRedirecionamento) Ausência de facilidades para a visibilidade do texto
+    4. Uso de elementos arcaicos como (.TABLE)
+    5. Re-uso da interface principal no pop-up
+
+// Pop-up
+    1. (.IMG) Uso de .png ao invés de imagens responsivas como .svg
+    2. Em (.INPUTS) o placeholder esta na cor azul, o que dificulta a visibilidade
+    3. Texto extremamente pequenos, especilamente em aparelhos com telas menores
+    4. Textos exageradamente repetidos
+    5. Seleção de tipo de pessoa, com links muito colados, o que pode ocasionar um error ao clicar
+    6. A falta de detalhamento e visuais modernos
+    
