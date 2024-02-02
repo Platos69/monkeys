@@ -1,0 +1,7 @@
+// Função utilizada para filtrar arrays
+
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
