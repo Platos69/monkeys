@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+.peso{
+    margin-bottom: 1rem;
+}
+
+.altura{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    background-color: tomato;
+    margin: 10rem;
+    padding: 40px;
+}
+
+.button{
+    margin-top: 2rem;
+    height: 20px;
+}
+
+.bnt{
+    width: 200px;
+    height: 40px;
+    background-color: orangered;
+    color: black;
+    border-radius: 8px;
+}
+
+
