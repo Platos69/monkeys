@@ -11,7 +11,7 @@ body {
     font-size: 36px;
 }
 
-.calculator {
+.app {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,29 +23,33 @@ body {
     font-size: 18px;
 }
 
-.calculator .inputs {
+.app .inputs {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.calculator .inputs .input-area {
+.app .inputs .input-area {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.calculator .inputs .input-area .error-msg {
+.app .inputs .input-area .error-msg {
     display: none;
     color: #bb3030;
     font-size: 14px;
 }
 
-.calculator .inputs .output-area {
+.app .output-area {
     display: none; /* When active: flex */
     flex-direction: column;
     gap: 5px;
 }
+.app .output-area .output,
+.app .output-area .description  {
+    display: inline-block;
+}
 
-.calculator .button {
+.app .button {
     display: flexbox;
     width: 150px;
     height: 36px;
