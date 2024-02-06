@@ -5,10 +5,10 @@ let categorias = [{ nome: 'Camiseta', categoria: 'Roupas' }, { nome: 'Celular', 
 let precos = [{ nome: 'Camiseta', preco: 20 }, { nome: 'Celular', preco: 500 }];
 let produtos = [];
 
-let combinarObjetos = categorias.map((p, i) => {
+let combinarObjetos = categorias.map((item, i) => {
     produtos.push({})
-    produtos[i].nome = categorias[i].nome
-    produtos[i].categoria = categorias[i].categoria
+    produtos[i].nome = item.nome
+    produtos[i].categoria = item.categoria
     produtos[i].preco = precos[i].preco
 })
 console.log(produtos) 
