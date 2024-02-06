@@ -1,24 +1,10 @@
-// Código documentado, para a didática!
-
 let produtos = [{ nome: 'Camiseta', categoria: 'Roupas' }, { nome: 'Celular', categoria: 'Eletrônicos' }];
 let precos = [{ nome: 'Camiseta', preco: 20 }, { nome: 'Celular', preco: 500 }];
 
 let produtosComPrecos = produtos.map(produtoElemento => {
     let { nome, categoria } = produtoElemento
-    /*
-    OU...
-        let nome = produtoElemento.nome
-        let categoria = produtoElemento.categoria
-    */
 
     let { preco } = precos.find(precoElemento => precoElemento.nome === nome);
-
-    /*
-    E porque não?
-        let preco = precos.find(precoElemento => precoElemento.nome === nome);
-
-        É simples, varíaveis e objetos são distintos, o que torna um absurdo o metodo sem "{}", porém uma questão ainda não sei responder, ao utilizar este método você obtém o objeto que atende a comparação (precoElemento.nome === nome), porém ele retorna o objeto por completo, bom como eu disse é uma questão que ainda não sei a resposta, mas é isso
-    */
 
     return { nome, categoria, preco };
 });
