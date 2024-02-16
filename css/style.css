@@ -57,10 +57,6 @@ main {
     gap: 15px;
 }
 
-.card-content img {
-    max-width: 50%;
-}
-
 .card-content .texto-categoria {
     display: flex;
     flex-direction: row;
