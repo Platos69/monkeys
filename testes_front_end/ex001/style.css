@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: darkseagreen;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    gap: 30px;
+    padding: 30px 40px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 18px;
+}
+
+.app .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.app .inputs .input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.app .inputs .input-area .error-msg {
+    display: none;
+    color: #bb3030;
+    font-size: 14px;
+}
+
+.app .output-area {
+    display: none; /* When active: flex */
+    flex-direction: column;
+    gap: 5px;
+}
+.app .output-area .output,
+.app .output-area .description  {
+    display: inline-block;
+}
+
+.app .button {
+    display: flexbox;
+    width: 150px;
+    height: 36px;
+    margin: 0 auto;
+}
