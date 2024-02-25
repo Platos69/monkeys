@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./public/css/index.css"">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações de filmes - API</title>
 </head>
 
@@ -12,18 +12,25 @@
     <div class="container">
         <div class="search-box-container">
             <label for="search-box">Busque por um filme: </label>
-            <input type="text" name="search-box" id="searchBox">
-            <div class="search-list hidden">
-                
+            <input type="text" name="search-box" id="searchBox" autocomplete="off">
+            <div class="container-search-list">
+                <div class="search-list hidden">
+                </div>
             </div>
-        </div>
 
+        </div>
+    </div>
+
+    <div class="container-results-movies">
+        <h3 class="title-results"></h3>
         <div class="results-list-movies">
 
-        </div>
-        
+    </div>
+    </div>
+    
+
     </div>
     <script src="./public/js/index.js"></script>
-</body> 
+</body>
 
 </html>

@@ -1,3 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    border: 1px solid black;
+}
+
+:root {
+
+}
+
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+.search-list {
+    display: grid;
+    grid-template-columns: auto;
+    max-width: 450px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.search-list div {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    max-width: 100%;
+    max-height: 80px;
+    gap: 10px;
+}
+
+.search-list div img {
+    max-width: 10%;
+}
+
+.search-list div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.results-list-movies {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.results-list-movies .result-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+
+.results-list-movies .result-container .img-results-list {
+    width: 100%;
+    min-height: 300px;
+    max-height: 300px;
 }

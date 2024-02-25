@@ -35,6 +35,19 @@ const showDetailsOfMovie = (arrayMovie) => {
     const actorsMovie = document.querySelector('.actors')
     const awardsMovie = document.querySelector('.awards')
 
+    const baseNumbers = arrayMovie.Runtime;
+    let catchedNumbers = 0;
+    
+    for (let i = 0; i < baseNumbers.length; i++) {
+        if (!isNaN(baseNumbers[i])) {
+            catchedNumbers += parseInt(baseNumbers[i]);
+        }
+    }
+    
+    console.log(catchedNumbers);
+
+    let convertTime = arrayMovie.Runtime / 60
+
     imageMovie.src = arrayMovie.Poster
     titleMovie.textContent += arrayMovie.Title
     timeMovie.textContent += arrayMovie.Runtime
@@ -47,12 +60,12 @@ const showDetailsOfMovie = (arrayMovie) => {
     actorsMovie.textContent += arrayMovie.Actors
     awardsMovie.textContent += arrayMovie.Awards
 
-    const ratedMoviesList = document.querySelector('.rated-critics')    
+    const ratedMoviesList = document.querySelector('.rated-critics')
 
     arrayMovie.Ratings.forEach(e => {
         const evaluation = document.createElement('ul')
         evaluation.innerHTML =
-        `
+            `
         <h4>${e.Source}</h4>
         <p>${e.Value}</p>
 
