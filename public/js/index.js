@@ -13,13 +13,13 @@ searchBox.addEventListener('keyup', (pressed) => {
         resultsListContainer.classList.add('clicked')
     } else {
         resultsListContainer.classList.remove('clicked')
-        resultsListContainer.innerHTML = ''
         searchListContainer.innerHTML = ''
     }
 
     if (pressed.key === "Enter") {
         titleResult.innerHTML = ''
         searchListContainer.innerHTML = ''
+        resultsListContainer.innerHTML = ''
         searchListContainer.classList.add('hidden')
         titleResult.innerHTML += `Resultados para : ${searchBox.value}`
         catchMoviesURL(showMoviesList)
@@ -60,6 +60,7 @@ const catchMoviesURL = (typeCatch) => {
 }
 
 const showMoviesListSearch = (arrayMovies) => {
+
     searchListContainer.classList.remove('hidden')
     arrayMovies.forEach((e) => {
         const searchItem = document.createElement('div')
@@ -108,7 +109,7 @@ const showMoviesList = (arrayMovies) => {
             <div class="result-container">
                 <img class="img-results-list" src="${imgPoster}" alt="">
                 <h4>${e.Title}</h4>
-                <h5>Ano: ${e.Year}</h5>
+                <h5>Year: ${e.Year}</h5>
             </div>
             `
             resultsContainer.addEventListener('click', () => {
@@ -118,7 +119,7 @@ const showMoviesList = (arrayMovies) => {
             resultsListContainer.appendChild(resultsContainer)
         });
     }
-    }
+}
 
 const showDetailsOfMovie = (titleMovie) => {
     window.location.href = `./pages/movie.html?movie=${titleMovie}`

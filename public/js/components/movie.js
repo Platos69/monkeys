@@ -20,7 +20,37 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 })
 
-// CONVERTER PRA TEMPO
+
+const timeConvert = (arrayMovie) => {
+    const baseNumbers = arrayMovie.Runtime
+    let catchedNumbers = '';
+
+    for (let i = 0; i < baseNumbers.length; i++) {
+        if (!isNaN(baseNumbers[i])) {
+            catchedNumbers += baseNumbers[i];
+        }
+    }
+
+    catchedNumbers = parseInt(catchedNumbers);
+
+    const correctionOfTimes = (a, b) => {
+        while (a >= 60) {
+            a -= 60;
+            b++;
+        }
+        return b;
+    }
+
+    const convertNumbers = () => {
+        let min = catchedNumbers, hrs = 0;
+        hrs = correctionOfTimes(min, hrs);
+        min -= hrs * 60;
+
+        return `${hrs} Hours and ${min} Minutes`;
+    }
+
+    return convertNumbers()
+}
 
 const showDetailsOfMovie = (arrayMovie) => {
     const imageMovie = document.querySelector('img')
@@ -35,22 +65,9 @@ const showDetailsOfMovie = (arrayMovie) => {
     const actorsMovie = document.querySelector('.actors')
     const awardsMovie = document.querySelector('.awards')
 
-    const baseNumbers = arrayMovie.Runtime;
-    let catchedNumbers = 0;
-    
-    for (let i = 0; i < baseNumbers.length; i++) {
-        if (!isNaN(baseNumbers[i])) {
-            catchedNumbers += parseInt(baseNumbers[i]);
-        }
-    }
-    
-    console.log(catchedNumbers);
-
-    let convertTime = arrayMovie.Runtime / 60
-
     imageMovie.src = arrayMovie.Poster
     titleMovie.textContent += arrayMovie.Title
-    timeMovie.textContent += arrayMovie.Runtime
+    timeMovie.textContent += timeConvert(arrayMovie)
     synopsisMovie.textContent += arrayMovie.Plot
     yearMovie.textContent += arrayMovie.Year
     ratingMovie.textContent += arrayMovie.Rated
@@ -65,10 +82,9 @@ const showDetailsOfMovie = (arrayMovie) => {
     arrayMovie.Ratings.forEach(e => {
         const evaluation = document.createElement('ul')
         evaluation.innerHTML =
-            `
-        <h4>${e.Source}</h4>
-        <p>${e.Value}</p>
-
+        `
+            <h4>${e.Source}</h4>
+            <p>${e.Value}</p>
         `
         ratedMoviesList.appendChild(evaluation)
     });
