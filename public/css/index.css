@@ -41,10 +41,9 @@
 }
 
 .results-list-movies {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .results-list-movies .result-container {

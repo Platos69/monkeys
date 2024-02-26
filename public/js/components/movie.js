@@ -65,7 +65,13 @@ const showDetailsOfMovie = (arrayMovie) => {
     const actorsMovie = document.querySelector('.actors')
     const awardsMovie = document.querySelector('.awards')
 
-    imageMovie.src = arrayMovie.Poster
+    let imgPoster = arrayMovie.Poster
+
+    if (imgPoster == 'N/A') {
+        imgPoster = '../../public/images/not_found.png'
+    }
+
+    imageMovie.src = imgPoster
     titleMovie.textContent += arrayMovie.Title
     timeMovie.textContent += timeConvert(arrayMovie)
     synopsisMovie.textContent += arrayMovie.Plot

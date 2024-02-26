@@ -67,7 +67,7 @@ const showMoviesListSearch = (arrayMovies) => {
         let imgPoster = e.Poster
 
         if (imgPoster == 'N/A') {
-            imgPoster = './public/images/not_found.png'
+            imgPoster = '../public/images/notfound.svg'
         }
 
         searchItem.innerHTML =

@@ -6,28 +6,32 @@ btnSubmit.addEventListener('click', (event) => {
     const inputPassword = document.getElementById('password').value
     event.preventDefault()
 
+    const userMsg = document.getElementById('userMsg')
+    const emailMsg = document.getElementById('emailMsg')
+    const passwordMsg = document.getElementById('passwordMsg')
+
     let RegexUser = /^[a-zA-Z]{3,10}$/
 
     if (RegexUser.test(inputUser)) {
-        console.log('passou no regex de usuário')
+        userMsg.style.display = 'none'
     } else {
-        console.log('reprovou no regex de usuário')
+        userMsg.style.display = 'inherit'
     }
 
     let RegexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     if (RegexEmail.test(inputEmail)) {
-        console.log('passou no regex de email')
+        emailMsg.style.display = 'none'
     } else {
-        console.log('reprovou no regex de email')
+        emailMsg.style.display = 'inherit'
     }
 
     let RegexPassword = /^\d+$/;
 
     if (RegexPassword.test(inputPassword)) {
-        console.log('passou no regex de senha')
+        passwordMsg.style.display = 'none'
     } else {
-        console.log('reprovou no regex de senha')
+        passwordMsg.style.display = 'inherit'
     }
 
     if (RegexUser.test(inputUser) && RegexEmail.test(inputEmail) && RegexPassword.test(inputPassword)) {
