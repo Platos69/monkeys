@@ -4,14 +4,21 @@
     gap: 0;
 }
 
-.container {
+.hidden {
+    display: none !important;
+}
+
+body {
+    background-color: #3f3e3e;
+    display: flex;
+    margin: 10px;
+}
+
+
+.container-search {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-}
-
-.hidden {
-    display: none !important;
 }
 
 .search-list {
