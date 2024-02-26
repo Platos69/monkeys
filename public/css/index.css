@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     gap: 0;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid white;
 }
 
 .hidden {
@@ -14,9 +18,9 @@ body {
     margin: 10px;
 }
 
-
 .container-search {
     display: flex;
+    width: 100vw;
     justify-content: space-around;
     flex-direction: row;
 }
@@ -45,6 +49,12 @@ body {
 .search-list div div {
     display: flex;
     flex-direction: column;
+}
+
+.search-box-container input {
+    padding: 10px;
+    width: 30vw;
+    border-radius: 5px;
 }
 
 .results-list-movies {
