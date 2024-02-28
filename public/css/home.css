@@ -5,7 +5,6 @@
     padding: 0;
     gap: 0;
     font-family: 'Roboto', sans-serif;
-    border: 1px solid white;
 }
 
 .hidden {
@@ -15,7 +14,8 @@
 body {
     background-color: #3f3e3e;
     display: flex;
-    margin: 10px;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 .container-search {
@@ -23,6 +23,8 @@ body {
     width: 100vw;
     justify-content: space-around;
     flex-direction: row;
+    background-color: black;
+    align-items: center;
 }
 
 .search-list {
@@ -30,7 +32,7 @@ body {
     grid-template-columns: auto;
     max-width: 450px;
     max-height: 250px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .search-list div {
@@ -51,22 +53,53 @@ body {
     flex-direction: column;
 }
 
+.search-box-container {
+    margin: 10px;
+}
+
 .search-box-container input {
     padding: 10px;
     width: 30vw;
     border-radius: 5px;
+    border: none;
+}
+
+.search-box-container input:focus {
+    outline: none;
+}
+
+.user {
+    display: flex;
+    gap: 10px;
+}
+
+.user a {
+    text-decoration: none;
+    color: white;
+}
+
+.user a:hover {
+    color: grey;
+}
+
+.container-results-movies {
+    margin: 10px;
 }
 
 .results-list-movies {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 40px;
+    margin: 10px;
 }
 
 .results-list-movies .result-container {
+    background-color: #555;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     max-width: 200px;
+    color: white;
 }
 
 .results-list-movies .result-container .img-results-list {
@@ -75,6 +108,26 @@ body {
 }
 
 .container-search-list {
+    border-radius: 5px 5px 5px 5px;
     background-color: green;
-    position:absolute;
+    position: absolute;
 }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555
+  }

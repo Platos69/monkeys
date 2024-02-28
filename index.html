@@ -3,32 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./public/css/index.css"">
-    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
-    <title>WikiMovies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/modules/login.css">
+    <title>Login Page</title>
 </head>
 
 <body>
-    <div class="container-search">
-        <div class="search-box-container">
-            <input placeholder="" type="text" name="search-box" id="searchBox" autocomplete="off">
-            <div class="container-search-list">
-                <div class="search-list hidden">
+    <div class="container">
+        <div class="left">
+        </div>
+        <div class="right">
+            <h2>Login</h2>
+            <div class="forms">
+                <label for="user">User: </label>
+                <input placeholder="Name" type="text" name="user" id="user" autocomplete="off">
+                <p id="userMsg">Incorrect name!</p>
+                <label for="password">Password: </label>
+                <input placeholder="Password" type="password" name="password" id="password" autocomplete="off">
+                <p id="passwordMsg">Incorrect password!</p>
+
+                <div class="more">
+                    <div class="links">
+                        <a href="./pages/home.html">Test as a guest</a>
+                        <a href="./pages/register.html">Dont have a account?</a>
+                    </div>
+                    <button id="btnSubmit">Login</button>
                 </div>
             </div>
         </div>
-        <div class="user">
-            <a href="./pages/login.html">Login</a>
-            <a href="./pages/register.html">Register</a>
-        </div>
     </div>
 
-    <div class="container-results-movies">
-        <h3 class="title-results"></h3>
-        <div class="results-list-movies">
-        </div>
-    </div>
-    <script src="./public/js/index.js"></script>
+    <script src="../public/js/components/login.js" type="module"></script>
 </body>
 
 </html>

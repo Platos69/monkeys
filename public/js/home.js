@@ -8,6 +8,44 @@ const resultsListContainer = document.querySelector('.results-list-movies')
 const titleResult = document.querySelector('.title-results')
 const searchListContainer = document.querySelector('.search-list')
 
+document.addEventListener('DOMContentLoaded', () => {
+    const arrayRandom = [
+        "Superman",
+        "Batman",
+        "Wonder Woman",
+        "Avengers",
+        "Doctor Strange",
+        "Captain America",
+        "Iron Man",
+        "Hulk",
+        "The Godfather",
+        "Star Wars",
+        "Jurassic Park",
+        "Harry Potter",
+        "The Avengers",
+        "Mission: Impossible",
+        "Pirates of the Caribbean",
+        "Indiana Jones",
+        "Toy Story",
+        "The Lord of the Rings",
+    ]
+
+    resultURL = `${baseURL}&s=${arrayRandom[(Math.floor(Math.random() * arrayRandom.length))]}`
+    fetch(resultURL)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Erro de rede! Código: ${response.status}`)
+            }
+            return response.json()
+        })
+        .then((data) => {
+            showMoviesList(data.Search)
+        })
+        .catch((err) => {
+            throw new Error(`Error na obtenção de dados! Código: ${err}`)
+        })
+})
+
 searchBox.addEventListener('keyup', (pressed) => {
     if (!resultsListContainer.classList.contains('clicked')) {
         resultsListContainer.classList.add('clicked')
@@ -66,8 +104,8 @@ const showMoviesListSearch = (arrayMovies) => {
         const searchItem = document.createElement('div')
         let imgPoster = e.Poster
 
-        if (imgPoster == 'N/A') {
-            imgPoster = '../public/images/notfound.svg'
+        if (imgPoster === 'N/A') {
+            imgPoster = '../public/images/not_found.png'
         }
 
         searchItem.innerHTML =
@@ -90,8 +128,8 @@ const showMoviesListSearch = (arrayMovies) => {
 
 const showMoviesList = (arrayMovies) => {
     if (!arrayMovies || !Array.isArray(arrayMovies)) {
-        resultsListContainer.innerHTML = 
-        `
+        resultsListContainer.innerHTML =
+            `
             <h3><strong>Nada encontrado</strong></h3>
         `
     } else {
@@ -99,11 +137,11 @@ const showMoviesList = (arrayMovies) => {
             const resultsContainer = document.createElement('div')
             resultsContainer.classList.add('results-container')
             let imgPoster = e.Poster
-    
+
             if (imgPoster == 'N/A') {
-                imgPoster = './public/images/not_found.png'
+                imgPoster = '../public/images/not_found.png'
             }
-    
+
             resultsContainer.innerHTML =
                 `
             <div class="result-container">
@@ -115,7 +153,7 @@ const showMoviesList = (arrayMovies) => {
             resultsContainer.addEventListener('click', () => {
                 showDetailsOfMovie(e.Title)
             })
-    
+
             resultsListContainer.appendChild(resultsContainer)
         });
     }

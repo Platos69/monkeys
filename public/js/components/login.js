@@ -29,7 +29,7 @@ btnSubmit.addEventListener('click', (event) => {
         }
 
         if (inputUser === e.user && inputPassword === e.password) {
-            window.location.href = '../../../index.html'
+            window.location.href = '../../pages/home.html'
         }
     })
 

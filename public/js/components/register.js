@@ -35,7 +35,7 @@ btnSubmit.addEventListener('click', (event) => {
     }
 
     if (RegexUser.test(inputUser) && RegexEmail.test(inputEmail) && RegexPassword.test(inputPassword)) {
-        window.location.href = '../../../index.html'
+        window.location.href = './home.html'
     }
 
 })

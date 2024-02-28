@@ -29,10 +29,17 @@ body {
     margin: 10px;
     color: #fff;
     border-radius: 5px;
+    height: 50%;
 }
 
-.container .left {
-    background-color: rgb(34, 34, 34);
+.container .left{
+    background-image: url('../../images/test.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    filter: blur(2px);
+    filter: brightness(50%);
+    background-size: cover;
     border-radius: 5px 0 0 5px;
     width: 25vw;
     display: flex;
@@ -116,20 +123,26 @@ body {
     }
 }
 
+p {
+    font-size: 12px;
+    color: #f02626;
+}
+
+
 @media (max-width: 916px) {
     .container .left {
-        width: 0%      
+        display: none;      
     }
 
     .container .right {
-        width: 32vw;      
+        width: 50vw;      
     }
     
 }
 
 @media (max-width: 480px) {
     .container .left {
-        width: 0%      
+        display: none;     
     }
 
     .container .right {
