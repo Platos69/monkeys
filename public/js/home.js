@@ -160,5 +160,5 @@ const showMoviesList = (arrayMovies) => {
 }
 
 const showDetailsOfMovie = (titleMovie) => {
-    window.location.href = `./pages/movie.html?movie=${titleMovie}`
+    window.location.href = `../pages/movie.html?movie=${titleMovie}`
 }

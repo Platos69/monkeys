@@ -91,20 +91,34 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     margin: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .results-list-movies .result-container {
     background-color: #555;
     padding: 10px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    min-width: 230px;
+    max-width: calc(10vw);
+    min-height: 380px;
+    max-height: 380px;
     color: white;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.results-list-movies .result-container:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
 }
 
 .results-list-movies .result-container .img-results-list {
-    min-height: 300px;
-    max-height: 300px;
+    min-height: 260px;
+    max-height: 260px;
 }
 
 .container-search-list {
