@@ -33,15 +33,25 @@ body {
     max-width: 450px;
     max-height: 250px;
     overflow-y: scroll;
+    margin: 0.5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-list div {
     display: flex;
     flex-direction: row;
-    padding: 5px;
-    max-width: 100%;
+    padding: 8px;
+    max-width: 95%;
     max-height: 80px;
     gap: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.search-list div:hover {
+    border-radius: 4px;
+    background-color: #888;
 }
 
 .search-list div img {
@@ -54,7 +64,7 @@ body {
 }
 
 .search-box-container {
-    margin: 10px;
+    margin: 15px;
 }
 
 .search-box-container input {
@@ -84,15 +94,24 @@ body {
 
 .container-results-movies {
     margin: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.results-list-movies {
+.results-list-movies,
+.title-results {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     margin: 10px;
     justify-content: center;
     align-items: center;
+}
+
+.title-results {
+    font-size: 30px;
 }
 
 .results-list-movies .result-container {
@@ -102,12 +121,12 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 230px;
-    max-width: calc(10vw);
+    max-width: 230px;
     min-height: 380px;
     max-height: 380px;
     color: white;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
@@ -123,13 +142,17 @@ body {
 
 .container-search-list {
     border-radius: 5px 5px 5px 5px;
-    background-color: green;
+    background-color: #555;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    color: white;
 }
 
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
   }
   
   ::-webkit-scrollbar-track {
